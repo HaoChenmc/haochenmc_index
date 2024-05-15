@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaoChen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+<nav>
+    <ul>
+        <li><a href="#home" onclick="loadMarkdown('home.md')">
+            <span class="svg-icon-home"></span> 主页</a></li>
+        <li><a href="#about" onclick="loadMarkdown('about.md')">
+            <span class="svg-icon-info"></span> 关于</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <div id="markdown-content" class="markdown-box">
+        <!-- Markdown 文本解析后将显示在这里 -->
+    </div>
+</div>
+<footer>
+    <p id="copyright">版权所有 ©HaoChen </p>
+</footer>
+<script src="loadMarkdown.js"></script>
+<script src="init.js"></script>
 </body>
-
 </html>
